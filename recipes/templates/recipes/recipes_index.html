@@ -1,0 +1,11 @@
+{% extends 'recipes/base.html' %}
+{% block content %}
+    <div class="content-block">
+
+        {% for recipe in recipes %}
+            <div class="recipe">
+                <h2>{{ recipe.title }}</h2>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

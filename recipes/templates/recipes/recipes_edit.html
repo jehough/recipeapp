@@ -1,0 +1,21 @@
+{% extends 'recipes/base.html' %}
+{% block content %}
+    <h1> {{recipe.title}} </h1>
+    <h2> Ingredients: </h2>
+        <ul>
+            {% for ingredient in recipe.ingredients.all %}
+                <li> {{ingredient.amount}} {{ingredient.name}}<button><span id="trashcan">&#x1F5D1</span></button></li>    
+            {% endfor %}
+        </ul>
+    <h4>Add An Ingredient:</h4>
+    <form>
+        {{ingredient_form}}
+        <button type=submit>Add Ingredient</button>
+    </form>
+    <form method="post" class="post-form">
+        {% csrf_token %}
+        {{recipe_form.as_p}}
+        
+        <button type="submit">Save Recipe</button>
+    </form>
+{% endblock %}
