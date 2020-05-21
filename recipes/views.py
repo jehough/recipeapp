@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Recipe, Ingredient
+from django.contrib.auth.models import User
 from .forms import RecipeForm, RecipeEditForm, IngredientForm
 from django.views.generic import FormView
 from django.http import JsonResponse
@@ -8,7 +9,8 @@ import json
 
 # Create your views here.
 def index(request):
-    recipes = Recipe.objects.all()
+    
+    recipes = request.user.recipe_set.all()
     return render(request, 'recipes/recipes_index.html', {'recipes': recipes})
 
 def show(request, pk):

@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block content %}
+{% if user.is_authenticated %}
     <h1 onload="load()"> {{recipe.title}} </h1>
     <h2> Ingredients: </h2>
         <ul id="ingredients_list">
@@ -27,7 +28,9 @@
         
         <button type="submit">Save Recipe</button>
     </form>
-
+{% else %}
+<h3>Please Login <a href="{% url 'login' %}">Here</a></h3>
+{% endif %}
 {% endblock %}
 {%block script%}
     <script type="text/javascript" src="{% static 'scripts/ajax.js' %}"

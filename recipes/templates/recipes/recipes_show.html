@@ -1,6 +1,8 @@
 {% extends 'recipes/base.html' %}
 
 {% block content %}
+{% if user.is_authenticated %}
+    <a class="btn btn-default" href="{% url 'recipe_edit' pk=recipe.pk %}"><span class="pencil">&#9998</span></a>
     <div class="recipe">
         
         <h2>{{ recipe.title }}</h2>
@@ -11,4 +13,7 @@
         </ul>
         <p>{{ recipe.instructions|linebreaksbr }}</p>
     </div>
+{% else %}
+<h3>Please Login <a href="{% url 'login' %}">Here</a></h3>
+{% endif %}
 {% endblock %}
