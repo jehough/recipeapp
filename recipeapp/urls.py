@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin, auth
 from django.urls import path, include
 from register import views as v
+from shoppinglist import views as sv
 
 
 urlpatterns = [
     path('recipeboss/', admin.site.urls),
     path('recipes/', include('recipes.urls')),
     path('register/', v.register, name="register"),
-    path('user/', include('django.contrib.auth.urls'))
+    path('user/', include('django.contrib.auth.urls')),
+    path('shoppinglist',sv.index, name="shopping_list")
 ]
