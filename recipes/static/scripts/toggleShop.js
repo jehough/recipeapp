@@ -32,7 +32,7 @@ function toggleShop(id){
             ing_id: id,
         })
     }
-    const url = `http://127.0.0.1:8000/recipes/toggle_ingredient`
+    const url = `http://teachlife.pythonanywhere.com/recipes/toggle_ingredient`
     fetch(url, obj)
         .then(resp => resp.json())
         .then(json => console.log(json))

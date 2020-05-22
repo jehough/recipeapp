@@ -34,7 +34,7 @@ form.addEventListener('submit', (e)=>{
             amount: e.target.amount.value
         })
     }
-    url = `http://127.0.0.1:8000/recipes/${e.target.recipe_id.value}/add_ingredient`
+    url = `http://teachlife.pythonanywhere.com/recipes/${e.target.recipe_id.value}/add_ingredient`
     fetch(url, obj)
         .then(resp=> resp.json())
         .then(json=> handleSuccess(json))
@@ -74,7 +74,7 @@ function handleClick(id){
             ing_id: id,
         })
     }
-    const url = `http://127.0.0.1:8000/recipes/delete_ingredient`
+    const url = `http://teachlife.pythonanywhere.com/recipes/delete_ingredient`
     fetch(url, obj)
         .then(resp => resp.json())
         .then(json => console.log(json))
