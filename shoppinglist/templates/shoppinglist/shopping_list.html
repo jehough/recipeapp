@@ -1,4 +1,17 @@
 {% extends 'recipes/base.html' %}
+{% load static%}
 {%block content%}
 <h1>Shopping List</h1>
+    <div class="content-block">
+        <ul>
+        {% for ingredient in shoppingList %}
+                <li id="ingredient{{ingredient.pk}}">
+                    <h2>{{ ingredient.name }}</h2>
+                    <button onclick="toggleShop({{ingredient.pk}})">Remove from list</button>
+                </li>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript" src="{% static 'scripts/toggleShop.js' %}" />
 {% endblock %}

@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin, auth
 from django.urls import path, include
+from recipes import views as rv
 from register import views as v
 from shoppinglist import views as sv
 
@@ -24,5 +25,6 @@ urlpatterns = [
     path('recipes/', include('recipes.urls')),
     path('register/', v.register, name="register"),
     path('user/', include('django.contrib.auth.urls')),
-    path('shoppinglist',sv.index, name="shopping_list")
+    path('shoppinglist',sv.index, name="shopping_list"),
+    path('', rv.home, name="home")
 ]

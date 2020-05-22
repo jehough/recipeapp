@@ -1,0 +1,157 @@
+.page-header {
+    background-color: #5c80bc;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+body{
+    background-color: #cdd1c4;
+
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 0;
+    margin-left: 0;
+    padding-top: 1em;
+    background-color: #4D5061;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+
+.recipe {
+    border: solid;
+    border-color: #30323d;
+    margin-top: 2em;
+    padding: 5em;
+    margin-right: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.recipe-instructions {
+    font-size: medium;
+}
+.recipe-box {
+    border: solid;
+    border-color: #000;
+    margin-top: 3em;
+    padding: 1em;
+    background-color: #4D5061;
+}
+.recipe-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: solid;
+    border-color: #000;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: #cdd1c4;
+}
+
+.nav-item {
+    padding: .01em 1em 1em 3em;
+    margin-top: 0;
+}
+
+.ingredient-list {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+}
+.ingredient-list-item {
+    display: grid;
+    grid-template-columns: 10em 10em 15em;
+    justify-content: start;
+    align-content: center;
+}
+
+.ingredient-button {
+    width: 15em;
+    height: 2em;
+    padding-top: .2em;
+    margin-top: .5em;
+}
+
+pre { 
+	margin: 20px; padding: 20px; 
+	color: #aaa; background-color: #222;
+	white-space: pre; text-shadow: 0 1px 0 #000;
+	border-radius: 15px; border-bottom: 1px solid #555;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4) inset, 0 0 20px rgba(0,0,0,0.2) inset;
+	font: 16px/24px 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+	}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #e8c547;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Impact';
+}
+
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a, .post h2 a:visited {
+    color: black;
+}
+
+button {
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #5c7fbc 5%, #30323d 100%);
+	background-color:#5c7fbc;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#cdd1c4;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+button:hover {
+	background:linear-gradient(to bottom, #30323d 5%, #5c7fbc 100%);
+	background-color:#30323d;
+}
+button:active {
+	position:relative;
+	top:1px;
+}

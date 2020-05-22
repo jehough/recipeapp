@@ -1,11 +1,12 @@
 {% extends 'recipes/base.html' %}
 {% block content %}
 {%if user.is_authenticated%}
-    <div class="content-block">
+    <div class="recipe-box">
 
         {% for recipe in recipes %}
-            <div class="recipe">
+            <div class="recipe-card">
                 <h2><a href="{% url 'recipes_show' pk=recipe.pk %}">{{ recipe.title }}</a></h2>
+                <h4>Created: {{recipe.created_at}}</h4>
             </div>
         {% endfor %}
     </div>

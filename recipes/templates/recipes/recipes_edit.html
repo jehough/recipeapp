@@ -6,10 +6,12 @@
 {% if user.is_authenticated %}
     <h1 onload="load()"> {{recipe.title}} </h1>
     <h2> Ingredients: </h2>
-        <ul id="ingredients_list">
+        <ul id="ingredients_list" class="ingredient-list">
             {% for ingredient in recipe.ingredient_set.all %}
-                <li id="ingredient{{ingredient.pk}}"> {{ingredient.amount}} {{ingredient.name}}
-                    <button  onclick="handleClick({{ingredient.pk}})">
+                <li id="ingredient{{ingredient.pk}}" class="ingredient-list-item"> 
+                <div class="ingredient-amount"><h4>{{ingredient.amount}}</h4></div> 
+                <div class="ingredient-name"><h4>{{ingredient.name}}</h4></div>
+                    <button  onclick="handleClick({{ingredient.pk}})" class="ingredient-button">
                         <span id="trashcan">&#x1F5D1</span>
                     </button>
                 </li>    
@@ -33,5 +35,5 @@
 {% endif %}
 {% endblock %}
 {%block script%}
-    <script type="text/javascript" src="{% static 'scripts/ajax.js' %}"
+    <script type="text/javascript" src="{% static 'scripts/ajax.js' %}" />
 {% endblock %}
