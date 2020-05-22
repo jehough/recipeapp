@@ -28,7 +28,9 @@ def new(request):
         print(request.POST)
         form = RecipeForm(request.POST)
         if form.is_valid():
-            recipe = form.save()
+            recipe = form.save(commit=False)
+            recipe.user = request.user
+            recipe.save()
             return redirect('recipe_edit', pk = recipe.pk)
     else:
         form = RecipeForm()

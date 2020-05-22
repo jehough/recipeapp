@@ -1,6 +1,7 @@
 {% extends 'recipes/base.html' %}
 {% block content %}
 {%if user.is_authenticated%}
+    <a href="{% url 'recipes_new'%}"><button>Add Recipe</button></a>
     <div class="recipe-box">
 
         {% for recipe in recipes %}
